@@ -12,7 +12,7 @@ interface Props {
 export const Header: FC<Props> = ({ locale }) => {
   const t = useTranslations('')
   return (
-    <div className='mx-auto flex max-w-screen-2xl flex-row items-center justify-between p-5'>
+    <div className='mx-auto flex max-w-(--breakpoint-2xl) flex-row items-center justify-between p-5'>
       <Link lang={locale} href='/'>
         <div className='flex flex-row items-center'>
           <div className='mb-2 h-14 w-14'>
@@ -24,10 +24,10 @@ export const Header: FC<Props> = ({ locale }) => {
       <div className='flex flex-row items-center gap-3'>
         <nav className='mr-10 inline-flex gap-5'>
           <Link lang={locale} href={`/about`}>
-            {t('About')}
+            {t('about')}
           </Link>
-          <a href=''>{t('Support')}</a>
-          <a href=''>{t('Other')}</a>
+          <a href=''>{t('support')}</a>
+          <a href=''>{t('other')}</a>
         </nav>
         <ThemeSwitch />
         <LangSwitcher />

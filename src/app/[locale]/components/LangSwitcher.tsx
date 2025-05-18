@@ -16,14 +16,10 @@ const LangSwitcher: React.FC = () => {
 
   const [isOptionsExpanded, setIsOptionsExpanded] = useState(false)
   const options: Option[] = [
-    { country: 'English', code: 'en' }, // Native name is the same
-    { country: 'Deutsch', code: 'de' },
+    { country: 'English', code: 'en' },
     { country: 'Français', code: 'fr' },
     { country: 'Español', code: 'es' },
-    { country: 'Русский', code: 'ru' },
     { country: '日本語', code: 'ja' },
-    { country: 'العربية', code: 'ar' },
-    { country: 'فارسی', code: 'fa' }
   ]
 
   return (
@@ -57,7 +53,7 @@ const LangSwitcher: React.FC = () => {
                       onMouseDown={e => {
                         e.preventDefault()
                       }}
-                      className={`block w-full px-4 py-2 text-left text-sm hover:bg-dropdownHover ${
+                      className={`block w-full px-4 py-2 text-left text-sm hover:bg-dropdown-hover ${
                         pathname === `/${lang.code}`
                           ? 'bg-selected text-primary hover:bg-selected'
                           : 'text-secondary'
