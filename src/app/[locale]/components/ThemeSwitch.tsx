@@ -25,7 +25,7 @@ export default function ThemeSwitch() {
         aria-expanded={isOpen}
         onClick={() => {}}
       >
-        <span className='ml-2'>{t('Theme')}</span>
+        <span className='ml-2'>{t("theme")}</span>
         <FiSun />
       </Button>
     )
@@ -44,7 +44,7 @@ export default function ThemeSwitch() {
         aria-expanded={isOpen}
         onClick={toggleDropdown}
       >
-        <span className='ml-2'>{t('Theme')}</span>
+        <span className='ml-2'>{t("theme")}</span>
         <FiSun />
       </Button>
       {isOpen && (

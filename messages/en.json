@@ -1,8 +1,11 @@
 {
+  "title": "Alfred MG",
+  "description": "The all-in-one automated platform for managing your communities and buildings",
   "about": "About",
   "support": "Support",
   "other": "Other",
   "dev-name": "Kike Vanegas",
   "aka": "Kz",
-  "lang-selection": "You have selected English language"
+  "lang-selection": "You have selected English language",
+  "theme": "Theme"
 }

@@ -10,6 +10,9 @@ import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/Header'
 import './globals.css'
 import TwSizeIndicator from './components/tw-size-indicator';
+import {getTranslations} from 'next-intl/server';
+import {onGetSEO} from '@/src/constants/SEO';
+import {Locale} from '@/src/constants/locales';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,11 +25,15 @@ const rubik = Rubik({
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk'
-})
-export const metadata: Metadata = {
-  title: 'Next Temp',
-  description: 'create next app By Yahya Parvar!'
-}
+});
+
+export async function generateMetadata({ params }: { params: { locale: Locale } }){
+  const { locale } = params
+  const t = await getTranslations({ locale });
+
+  const metadata = onGetSEO(t, locale);
+  return metadata;
+};
 
 export default function RootLayout({
   children,

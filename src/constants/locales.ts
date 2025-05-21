@@ -5,4 +5,4 @@ export const localesPrefixes = {
   'pt': '/pt',
 };
 export const locales = Object.keys(localesPrefixes);
-export type Locale = typeof locales[number];
+export type Locale = "es" | "en" | "fr" | "pt";
