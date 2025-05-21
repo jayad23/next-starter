@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to Alfred
 
-## Getting Started
+[View Design](https://www.figma.com/design/KImAEAqgfI0PM5gZ59Ktpq/ALFRED-MG?node-id=0-1&p=f&t=CdB8ifwESxCoQF3r-0)
 
-First, run the development server:
+<p align="middle">
+<img  width="900px" height="500px" src="./resources/images/png/new-cover-showcase.png" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Dependencies
+
+It includes a basic setup for a project with react-router v7 framework mode and:
+
+- React 19 & react-compiler
+- TypeScript
+- TailwindCSS
+- Vite
+- Vitest (unit tests)
+- Scripting
+- Biome (linter & formatter)
+- i18n support (client and server)
+- Icons spritesheet generator
+- lefthook hooks
+- CI checks for quality control
+- react-router-devtools
+- Hono server
+- .env var handling for server and client
+- SEO robots.txt, sitemap-index and sitemap built in.
+
+## Internationalization
+
+This stack uses i18next for internationalization. It supports both client and
+server side translations. Features included out of the box:
+
+- Support for multiple languages
+- Typesafe resources
+- client side translations are fetched only when needed
+- language switcher
+- language detector (uses the request to detect the language, falls back to your
+  fallback language)
+
+## Hono server
+
+This stack uses Hono for the server. More information about Hono can be found
+[here](https://honojs.dev/). Another important thing to note is that we use a
+dependency called `react-router-hono-server` which is a wrapper for Hono that
+allows us to use Hono in our React Router application.
+
+The server comes pre-configured with:
+
+- i18next middleware
+- caching middleware for assets
+- easily extendable global application context
+- .env injection into context
+
+In order to add your own middleware, extend the context, or anything along those
+lines, all you have to do is edit the server inside the `entry.server.tsx` file.
+
+## .env handling
+
+This stack parses your `.env` file and injects it into the server context. For
+the client side, in the `root.tsx` file, we use the `useLoaderData` hook to get
+the `clientEnv` from the server and set it as a global variable on the `window`
+called `env`. If you need to access the env variables in both environments, you
+can create a polyEnv helper like this:
+
+```ts
+// app/utils/env.ts
+// This will return the process.env on the server and window.env on the client
+export const polyEnv = typeof process !== 'undefined' ? process.env : window.env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The server will fail at runtime if you don't set your `.env` file properly.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Externals
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Icons](https://icon-sets.iconify.design/); <i>When copying, make sure to
+  extract only the `<path />` element; it's what the internal custom `<Icon />`
+  component is expecting.</i>
 
-## Learn More
+- #### Routing
+  Our routing follows a file-base routing system similar to that of Next.js in
+  the early days, or currently in Remix. For more information, please, refer to
+  the
+  [RRV7 official documentation](https://reactrouter.com/how-to/file-route-conventions).
 
-To learn more about Next.js, take a look at the following resources:
+## Structure & convention
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="middle">
+	<img  width="900px" height="500px" src="./resources/images/png/structure-tree.png" />
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Authors
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [_@jayad23_](https://github.com/jayad23)
+- [_@jonathanroddev_](https://github.com/jonathanroddev)
