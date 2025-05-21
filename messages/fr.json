@@ -1,8 +1,11 @@
 {
+  "title": "Alfred MG",
+  "description": "L’outil tout-en-un pour automatiser la gestion des copropriétés et des immeubles",
   "about": "À propos",
   "support": "Support",
   "other": "Autre",
   "dev-name": "Kike Vanegas",
   "aka": "Kz",
-  "lang-selection": "Vous avez sélectionné la langue française"
+  "lang-selection": "Vous avez sélectionné la langue française",
+  "theme": "Thème"
 }

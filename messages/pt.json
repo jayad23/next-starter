@@ -1,8 +1,11 @@
 {
+  "title": "Alfred MG",
+  "description": "A ferramenta tudo-em-um para automatizar a gestão de comunidades e edifícios",
   "about": "Sobre",
   "support": "Apoio",
   "other": "Outro",
   "dev-name": "Kike Vanegas",
   "aka": "Kz",
-  "lang-selection": "Selecionaste o idioma português"
+  "lang-selection": "Selecionaste o idioma português",
+  "theme": "Tema"
 }
