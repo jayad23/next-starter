@@ -5,7 +5,7 @@ export const onGetSEO = (t: any, locale: Locale) => {
   const ogImageUrl = `${BASE_URL}/og.png`;
 
   return {
-    metadataBase: BASE_URL,
+    metadataBase: new URL(BASE_URL),
     title: t('title'),
     description: t('description'),
     alternates: {
