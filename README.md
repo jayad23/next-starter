@@ -10,21 +10,20 @@
 
 It includes a basic setup for a project with react-router v7 framework mode and:
 
-- React 19 & react-compiler
+- React 18.2 with Next.js 14.1
 - TypeScript
-- TailwindCSS
-- Vite
-- Vitest (unit tests)
-- Scripting
-- Biome (linter & formatter)
-- i18n support (client and server)
-- Icons spritesheet generator
-- lefthook hooks
-- CI checks for quality control
-- react-router-devtools
-- Hono server
-- .env var handling for server and client
-- SEO robots.txt, sitemap-index and sitemap built in.
+- TailwindCSS v4 with animations and merge utilities
+- ESLint & Prettier for code quality
+- Next-intl for i18n support (client and server)
+- Next-themes for theme management
+- Radix UI components
+- React Icons
+- Recharts for data visualization
+- SEO optimization with metadata, robots.txt, and sitemap support
+- Progress bar with nextjs-toploader
+- Date handling with date-fns
+- React Day Picker for calendar components
+- Modern hooks with usehooks-ts
 
 ## Internationalization
 
@@ -86,7 +85,7 @@ The server will fail at runtime if you don't set your `.env` file properly.
 ## Structure & convention
 
 <p align="middle">
-	<img  width="900px" height="500px" src="./resources/images/png/structure-tree.png" />
+	<img  width="900px" height="500px" src="./src/resources/images/png/structure-tree.png" />
 </p>
 
 ## Authors
