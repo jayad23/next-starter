@@ -3,6 +3,7 @@ export const localesPrefixes = {
   'en': '/en',
   'fr': '/fr',
   'pt': '/pt',
+  'ja': '/ja',
 };
-export const locales = Object.keys(localesPrefixes);
-export type Locale = "es" | "en" | "fr" | "pt";
+export const locales = ["es", "en", "fr", "pt", "ja"];
+export type Locale = "es" | "en" | "fr" | "pt" | "ja";

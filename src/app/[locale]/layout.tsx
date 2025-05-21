@@ -46,7 +46,8 @@ export default function RootLayout({
   return (
     <html
       lang={locale}
-      dir={locale === 'ar' || locale == 'fa' ? 'rtl' : 'ltr'}
+      //dir={locale === 'ar' || locale == 'fa' ? 'rtl' : 'ltr'}
+      dir='ltr'
       className={`${space_grotesk.variable} ${rubik.variable} scroll-smooth`}
       suppressHydrationWarning
     >
@@ -70,6 +71,7 @@ export default function RootLayout({
           <NextIntlClientProvider
             locale={locale}
             messages={messages as AbstractIntlMessages}
+            timeZone="UTC" now={new Date()}
           >
             <NextTopLoader
               initialPosition={0.08}

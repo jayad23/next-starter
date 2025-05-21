@@ -1,5 +1,7 @@
+import {locales as LocalesOptions } from "@/src/constants/locales";
+
 export async function GET() {
-  const locales = ['en', 'es'];
+  const locales = LocalesOptions;
   const pages = ['', '/about', '/contact'];
 
   const urls = locales.flatMap(locale =>

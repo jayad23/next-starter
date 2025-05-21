@@ -1,8 +1,11 @@
 {
+  "title": "アルフレッドMG",
+  "description": "コミュニティや建物の管理を自動化するオールインワンツール",
   "about": "概要",
   "support": "サポート",
   "other": "その他",
-  "dev-name": "Kike Vanegas",
+  "dev-name": "キケ・バネガス",
   "aka": "Kz",
-  "lang-selection": "日本語を選択しました"
+  "lang-selection": "ポルトガル語を選択しました",
+  "theme": "テーマ"
 }

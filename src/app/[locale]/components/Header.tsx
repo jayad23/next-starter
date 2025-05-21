@@ -6,6 +6,7 @@ import GithubIcon from '../../icons/github'
 import LogoIcon from '../../icons/logo'
 import LangSwitcher from './LangSwitcher'
 import ThemeSwitch from './ThemeSwitch'
+import Image from 'next/image';
 interface Props {
   locale: string
 }
@@ -16,9 +17,9 @@ export const Header: FC<Props> = ({ locale }) => {
       <Link lang={locale} href='/'>
         <div className='flex flex-row items-center'>
           <div className='mb-2 h-14 w-14'>
-            <LogoIcon />
+            <Image src={`${process.env.NEXT_PUBLIC_BASE_URL}/logo-bg-off.svg`} alt='logo' width={56} height={56} />
           </div>
-          <strong className='mx-2 select-none'>Template</strong>
+          <strong className='mx-2 select-none'>Alfred MG</strong>
         </div>
       </Link>
       <div className='flex flex-row items-center gap-3'>
@@ -32,7 +33,7 @@ export const Header: FC<Props> = ({ locale }) => {
         <ThemeSwitch />
         <LangSwitcher />
         <a
-          href='https://github.com/yahyaparvar/nextjs-template'
+          href='https://github.com/jayad23/next-starter'
           target='_blank'
         >
           <div className='size-8'>
