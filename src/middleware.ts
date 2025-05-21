@@ -1,7 +1,6 @@
 import createMiddleware from 'next-intl/middleware'
 import { NextRequest } from 'next/server'
-import { locales } from './i18n'
-import { localePrefix } from './navigation'
+import {routing} from './i18n/routing';
 
 type CustomMiddleware = (req: NextRequest) => Promise<NextRequest>
 
@@ -9,11 +8,7 @@ const customMiddleware: CustomMiddleware = async req => {
   return req
 }
 
-const intlMiddleware = createMiddleware({
-  locales,
-  defaultLocale: "es",
-  localePrefix
-})
+const intlMiddleware = createMiddleware(routing)
 
 export default async function middleware(
   req: NextRequest
