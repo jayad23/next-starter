@@ -18,7 +18,7 @@ export const Header: FC<Props> = ({ locale }) => {
         <div className="flex flex-row items-center">
           <h1 className="text-7xl font-extrabold leading-tight">
             <span className="bg-span-bg bg-clip-text text-transparent">
-              {t("title")}
+              {t("header-nickname-title")}
             </span>
           </h1>
         </div>

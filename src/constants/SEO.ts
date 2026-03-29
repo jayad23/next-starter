@@ -6,25 +6,25 @@ export const onGetSEO = (t: any, locale: Locale) => {
 
   return {
     metadataBase: new URL(BASE_URL),
-    title: t("title"),
-    description: t("description"),
+    title: t("seo-title"),
+    description: t("seo-profile-description"),
     alternates: {
       canonical: `${BASE_URL}/${locale}`,
     },
     robots: { index: true, follow: true },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: t("seo-title"),
+      description: t("seo-profile-description"),
       url: `${BASE_URL}/${locale}`,
-      siteName: "Alfred MG",
+      siteName: "Frontend Developer Kike Vanegas",
       images: [ogImageUrl],
       locale: locale,
       type: "website"
     },
     twitter: {
       card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
+      title: t("seo-title"),
+      description: t("seo-profile-description"),
       images: [ogImageUrl],
     }
   };
