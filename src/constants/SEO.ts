@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Locale } from "./locales";
-
+//generating change to trigger development
 const DEFAULT_BASE_URL = "http://localhost:3000";
 const OG_IMAGE_PATH = "/kz-logo-social.jpg";
 
