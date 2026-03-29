@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Locale } from "./locales";
 
 const DEFAULT_BASE_URL = "http://localhost:3000";
-const OG_IMAGE_PATH = "/kz-logo.png";
+const OG_IMAGE_PATH = "/kz-logo-social.jpg";
 
 const getBaseUrl = () => {
   const configuredBaseUrl = process.env.NEXT_PUBLIC_BASE_URL?.trim();
