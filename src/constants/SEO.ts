@@ -1,24 +1,38 @@
+import { Metadata } from "next";
 import { Locale } from "./locales";
-import ogImage from "../../public/kz-logo.png";
 
-export const onGetSEO = (t: any, locale: Locale) => {
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const ogImageUrl = ogImage;
+const DEFAULT_BASE_URL = "http://localhost:3000";
+const OG_IMAGE_PATH = "/kz-logo.png";
+
+const getBaseUrl = () => {
+  const configuredBaseUrl = process.env.NEXT_PUBLIC_BASE_URL?.trim();
+
+  return configuredBaseUrl?.replace(/\/$/, "") || DEFAULT_BASE_URL;
+};
+
+export const onGetSEO = (t: any, locale: Locale): Metadata => {
+  const baseUrl = getBaseUrl();
+  const ogImageUrl = new URL(OG_IMAGE_PATH, baseUrl).toString();
 
   return {
-    metadataBase: new URL(BASE_URL),
+    metadataBase: new URL(baseUrl),
     title: t("seo-title"),
     description: t("seo-profile-description"),
     alternates: {
-      canonical: `${BASE_URL}/${locale}`,
+      canonical: `${baseUrl}/${locale}`,
     },
     robots: { index: true, follow: true },
     openGraph: {
       title: t("seo-title"),
       description: t("seo-profile-description"),
-      url: `${BASE_URL}/${locale}`,
+      url: `${baseUrl}/${locale}`,
       siteName: "Frontend Developer Kike Vanegas",
-      images: [ogImageUrl],
+      images: [
+        {
+          url: ogImageUrl,
+          alt: t("seo-title"),
+        },
+      ],
       locale: locale,
       type: "website"
     },
@@ -29,4 +43,4 @@ export const onGetSEO = (t: any, locale: Locale) => {
       images: [ogImageUrl],
     }
   };
-}
+};
