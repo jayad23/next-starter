@@ -6,14 +6,14 @@ export default function DashboardPage() {
   return (
     <div>
       <section className="flex flex-col items-center justify-center py-24">
-        <h1 className="text-center text-7xl font-extrabold leading-tight">
-          {t("aka")} {" "}
-          <span className="bg-span-bg bg-clip-text text-transparent">
+        <div className="text-center font-extrabold leading-tight">
+          <h1 className="text-7xl bg-span-bg bg-clip-text text-transparent">
             {t("dev-name")}
-          </span>
-          <br />
-          {t("lang-selection")}
-        </h1>
+          </h1>
+          <div className="text-center text-3xl mt-4">
+            {t("prof-description-short")}
+          </div>
+        </div>
       </section>
     </div>
   )

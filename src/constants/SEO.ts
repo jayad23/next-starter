@@ -2,7 +2,7 @@ import {Locale} from "./locales";
 
 export const onGetSEO = (t: any, locale: Locale) => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const ogImageUrl = `${BASE_URL}/og.png`;
+  const ogImageUrl = `${BASE_URL}/kz-logo.png`;
 
   return {
     metadataBase: new URL(BASE_URL),
