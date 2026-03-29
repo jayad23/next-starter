@@ -1,8 +1,9 @@
-import {Locale} from "./locales";
+import { Locale } from "./locales";
+import ogImage from "../../public/kz-logo.png";
 
 export const onGetSEO = (t: any, locale: Locale) => {
   const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const ogImageUrl = `${BASE_URL}/kz-logo.png`;
+  const ogImageUrl = ogImage;
 
   return {
     metadataBase: new URL(BASE_URL),
