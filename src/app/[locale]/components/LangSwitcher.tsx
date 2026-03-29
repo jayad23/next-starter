@@ -1,10 +1,11 @@
-'use client'
-import { capitalize } from '@/lib/utils'
-import Link from 'next/link'
-import { usePathname, useSelectedLayoutSegments } from 'next/navigation'
-import React, { useState } from 'react'
-import { FiGlobe } from 'react-icons/fi'
-import Button from './Button'
+"use client"
+import { capitalize } from "@/lib/utils"
+import Link from "next/link"
+import { usePathname, useSelectedLayoutSegments } from "next/navigation"
+import React, { useState } from "react"
+import { FiGlobe } from "react-icons/fi"
+import Button from "./Button"
+import CustomButton from "../shared/button";
 
 const LangSwitcher: React.FC = () => {
   interface Option {
@@ -16,38 +17,37 @@ const LangSwitcher: React.FC = () => {
 
   const [isOptionsExpanded, setIsOptionsExpanded] = useState(false)
   const options: Option[] = [
-    { country: 'Español', code: 'es' },
-    { country: 'English', code: 'en' },
-    { country: 'Français', code: 'fr' },
-    { country: 'Português', code: 'pt' },
-    { country: '日本語', code: 'ja' },
+    { country: "Español", code: "es" },
+    { country: "English", code: "en" },
+    { country: "Français", code: "fr" },
+    { country: "Português", code: "pt" },
+    { country: "日本語", code: "ja" },
   ]
 
   return (
-    <div className='flex items-center justify-center'>
-      <div className='relative'>
-        <Button
-          className='text-destructive inline-flex w-full items-center justify-between gap-3'
-          size='small'
+    <div className="flex items-center justify-center">
+      <div className="relative">
+        <CustomButton 
+          isOpen={true}
           onClick={() => setIsOptionsExpanded(!isOptionsExpanded)}
           onBlur={() => setIsOptionsExpanded(false)}
+          className="w-full"
         >
-          Language
           <FiGlobe />
-        </Button>
+        </CustomButton>
         {isOptionsExpanded && (
-          <div className='absolute right-0 mt-2 w-full origin-top-right rounded-md bg-dropdown shadow-lg'>
+          <div className="absolute right-0 mt-2 w-[100px] origin-top-right rounded-md bg-dropdown shadow-lg">
             <div
-              className='py-1'
-              role='menu'
-              aria-orientation='vertical'
-              aria-labelledby='options-menu'
+              className="py-1"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="options-menu"
             >
               {options.map(lang => {
                 return (
                   <Link
                     key={lang.code}
-                    href={`/${lang.code}/${urlSegments.join('/')}`}
+                    href={`/${lang.code}/${urlSegments.join("/")}`}
                   >
                     <button
                       lang={lang.code}
@@ -56,8 +56,8 @@ const LangSwitcher: React.FC = () => {
                       }}
                       className={`block w-full px-4 py-2 text-left text-sm hover:bg-dropdown-hover ${
                         pathname === `/${lang.code}`
-                          ? 'bg-selected text-primary hover:bg-selected'
-                          : 'text-secondary'
+                          ? "bg-selected text-primary hover:bg-selected"
+                          : "text-secondary"
                       }`}
                     >
                       {capitalize(lang.country)}
