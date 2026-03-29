@@ -65,15 +65,15 @@ can create a polyEnv helper like this:
 ```ts
 // app/utils/env.ts
 // This will return the process.env on the server and window.env on the client
-export const polyEnv = typeof process !== 'undefined' ? process.env : window.env
+export const polyEnv = typeof process !== "undefined" ? process.env : window.env
 ```
 
-The server will fail at runtime if you don't set your `.env` file properly.
+The server will fail at runtime if you don"t set your `.env` file properly.
 
 ## Externals
 
 - [Icons](https://icon-sets.iconify.design/); <i>When copying, make sure to
-  extract only the `<path />` element; it's what the internal custom `<Icon />`
+  extract only the `<path />` element; it"s what the internal custom `<Icon />`
   component is expecting.</i>
 
 - #### Routing

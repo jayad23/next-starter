@@ -1,11 +1,11 @@
 {
-  "title": "アルフレッドMG",
-  "description": "コミュニティや建物の管理を自動化するオールインワンツール",
+  "header-nickname-title": "カゼ",
+  "seo-profile-description": "React、TypeScript、および拡張性のあるプロダクション向けインターフェースを専門とするフロントエンドエンジニア。マイクロフロントエンド、Node.js、およびAI駆動のワークフローの実装経験を有しています",
   "about": "概要",
   "support": "サポート",
   "other": "その他",
   "dev-name": "キケ・バネガス",
   "aka": "Kz",
-  "lang-selection": "ポルトガル語を選択しました",
+  "prof-description-short": "React、TypeScript、および拡張性のあるプロダクション向けインターフェースを専門とするフロントエンドエンジニア",
   "theme": "テーマ"
 }

@@ -1,11 +1,12 @@
 {
-  "title": "Alfred MG",
-  "description": "La herramienta todo-en-uno para automatizar la gestión de comunidades de vecinos y edificios",
+  "header-nickname-title": "Kz",
+  "seo-title": "Kike Vanegas",
+  "seo-profile-description": "Frontend Developer especializado en React, TypeScript e interfaces escalables en producción, con experiencia en microfrontends, Node.js y flujos impulsados por IA.",
   "about": "Acerca de",
   "support": "Soporte",
   "other": "Otros",
   "dev-name": "Kike Vanegas",
   "aka": "Kz",
-  "lang-selection": "Has seleccionado la lengua Español",
+  "prof-description-short": "Frontend Developer especializado en React, TypeScript e interfaces escalables en producción",
   "theme": "Tema"
 }
